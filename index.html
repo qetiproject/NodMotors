@@ -1,37 +1,43 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Final Project - Nod-Motors">
 	<meta name="keywords" content="HTML,CSS,JavaScript">
   	<meta name="author" content="Qeti Khetsuriani">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title> Nod-Motors </title>
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/terms.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/contact.css">
 </head>
 <body>
+	<!-- header -->
 	<header>
-		<a href="index.html"><img src="/assets/images/static/logo.svg" alt="Nod-Motors ლოგო" title="Nod-Motors - ლოგო"></a>
-		<nav>
+		<a href="index.html"><img src="assets/images/static/logo.svg" alt="Nod-Motors ლოგო" title="Nod-Motors - ლოგო"></a>
+		<nav id="menu">
 			<ul class="header-navigation">
-				<li><a href="#cars">Cars</a></li>
+				<li><a href="#!">Cars</a></li>
 				<li><a href="terms&conditions.html">Terms and Conditions</a></li>
 				<li><a href="contact.html">Contact</a></li>
 				<li class="book"><a href="#!">Book</a></li>
 			</ul>
 		</nav>
+		<!-- burger menu -->
+		<div class="burger" id="burger">
+			<span class="burger_item"></span>
+			<span class="burger_item"></span>
+			<span class="burger_item"></span>
+		</div>
+		<!-- burger menu end -->
 	</header>
+	<!-- header end -->
 	<!-- hero -->
 	<div class="hero">
 		<section class="hero_content">
-			<h1 class="hero_title">Tesla Model 3</h1>
+			<h1 class="hero_title" >Tesla Model 3</h1>
 			<p>Luxury Fast</p>
 			<div class="main_pic">
-				<img src="/assets/images/mainPic.png" alt="mainPic" title="mainPic">
+				<img src="assets/images/mainPic.png" alt="mainPic" title="mainPic">
 			</div>
 			<ul class="main_pic_info">
 				<li><span class="main_pic_data_title">power:</span>
@@ -50,14 +56,14 @@
     <!-- hero end -->
     <!-- cars -->
     <section id="cars" class="cars">
-    	<h1 class="cars_title">Available Cars</h1>
+    	<h2 class="cars_title">Available Cars</h2>
     	<p>Please Use filter for optimal results</p>
     	<!--  Dropdown choose menu -->
     	<form action="#!" method="post" class="select">
     		<div class="left_selmenus">
     			<div class="sel_menu">
     				<select name="manufacturer">
-    					<option value="Manufacturer"selected>Manufacturer</option>
+    					<option value="Manufacturer" selected>Manufacturer</option>
     					<option value="Tesla">Tesla</option>
     					<option value="Mercedes-Benz">Mercedes-Benz</option>
     					<option value="BMW">BMW</option>
@@ -96,8 +102,9 @@
     	<!-- cars menu -->
 		<ul class="cars_menu">
 			<li class="cars_content">
-				<span>from: <span class="price_category">59 000 $</span></span>
-				<a href="!#" target="_blank"><img class="cars_content_img" src="/assets/images/BMV-X2.png" alt="BMV-X2" title="BMV-X2"></a>
+				<span>from: <span class="category">59 000 $</span></span>
+				<a href="model3.html" target="_blank">
+					<img class="cars_content_img lazy" src="assets/images/BMV-X2.png" data-src="assets/images/BMV-X2.png" alt="BMV-X2" title="BMV-X2"></a>
 				<span class="circles">
 					<span class="white"></span>
 					<span class="black"></span>
@@ -112,8 +119,9 @@
 				</ul>
 			</li>
 			<li class="cars_content">
-				<span>from: <span class="price_category">79 000 $</span></span>
-				<a href="!#" target="_blank"><img class="cars_content_img" src="/assets/images/BMV-M6.png" alt="BMV-M6" title="BMV-M6"></a>
+				<span>from: <span class="category">79 000 $</span></span>
+				<a href="model3.html" target="_blank">
+					<img class="cars_content_img lazy" src="assets/images/BMV-X2.png" data-src="assets/images/BMV-M6.png" alt="BMV-M6" title="BMV-M6"></a>
 				<span class="circles">
 					<span class="white"></span>
 					<span class="black"></span>
@@ -128,8 +136,9 @@
 				</ul>
 			</li>
 			<li class="cars_content">
-				<span>from: <span class="price_category">103 000 $</span></span>
-				<a href="!#" target="_blank"><img class="cars_content_img" src="/assets/images/BMV-X7.png" alt="BMV-X7" title="BMV-X7"></a>
+				<span>from: <span class="category">103 000 $</span></span>
+				<a href="model3.html" target="_blank">
+					<img class="cars_content_img lazy" src="assets/images/BMV-X2.png" data-src="assets/images/BMV-X7.png" alt="BMV-X7" title="BMV-X7"></a>
 				<span class="circles">
 					<span class="white"></span>
 					<span class="black"></span>
@@ -144,9 +153,9 @@
 				</ul>
 			</li>
 			 <li class="cars_content">
-				<span>from: <span class="price_category">61 000 $</span></span>
+				<span>from: <span class="category">61 000 $</span></span>
 				<a href="model3.html" target="_blank">
-					<img class="cars_content_img" src="/assets/images/BMV-X2.png" alt="BMV-X2" title="BMV-X2"></a>
+					<img class="cars_content_img lazy" src="assets/images/BMV-X2.png" data-src="assets/images/BMV-X2.png" alt="BMV-X2" title="BMV-X2"></a>
 				<span class="circles">
 					<span class="white"></span>
 					<span class="black"></span>
@@ -161,8 +170,9 @@
 				</ul>
 			</li>
 			<li class="cars_content">
-				<span>from: <span class="price_category">92 000 $</span></span>
-				<a href="!#" target="_blank"><img class="cars_content_img" src="/assets/images/BMV-M6.png" alt="BMV-M6" title="BMV-M6"></a>
+				<span>from: <span class="category">92 000 $</span></span>
+				<a href="model3.html" target="_blank">
+					<img class="cars_content_img lazy" src="assets/images/BMV-X2.png" data-src="assets/images/BMV-M6.png" alt="BMV-M6" title="BMV-M6"></a>
 				<span class="circles">
 					<span class="white"></span>
 					<span class="black"></span>
@@ -177,8 +187,9 @@
 				</ul>
 			</li>
 			<li class="cars_content">
-				<span>from: <span class="price_category">132 000 $</span></span>
-				<a href="!#" target="_blank"><img class="cars_content_img" src="/assets/images/BMV-X7.png" alt="BMV-X7" title="BMV-X7"></a>
+				<span>from: <span class="category">132 000 $</span></span>
+				<a href="model3.html" target="_blank">
+					<img class="cars_content_img lazy" src="assets/images/BMV-X2.png" data-src="assets/images/BMV-X7.png" alt="BMV-X7" title="BMV-X7"></a>
 				<span class="circles">
 					<span class="white"></span>
 					<span class="black"></span>
@@ -196,10 +207,9 @@
 		<!-- cars menu end -->
 	</section>
 	<!-- cars end -->
-
 	<!-- footer -->
 	<footer>
-		<a href=""><img src="/assets/images/static/logo-bl.svg" alt="logo-bl" title="SmartAcademy"></a>
+		<a href=""><img src="assets/images/static/logo-bl.svg" alt="logo-bl" title="SmartAcademy"></a>
 		<p>© nodmotors GE 2018</p>
 		<ul class="info">
 			<li>(+995) 595 483 217</li>
@@ -207,5 +217,6 @@
 		</ul>
 	</footer>
 	<!-- footer end -->
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
