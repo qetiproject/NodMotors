@@ -1,20 +1,38 @@
 // burger მენიუ
 
-var burger = document.getElementById('burger'),
+// var burger = document.getElementById('burger'),
 
-menu = document.getElementById('menu'),
+// menu = document.getElementById('menu'),
 
-burger_item = document.querySelectorAll(".burger_item");
+// burger_item = document.querySelectorAll(".burger_item");
 
-document.getElementById("burger").addEventListener("click", function(){
+// document.getElementById("burger").addEventListener("click", function(){
  
-	burger_item[0].classList.toggle("animate0")
-	burger_item[1].classList.toggle("hide");
-	burger_item[2].classList.toggle("animate2");
-	menu.classList.toggle("active");
-})
+// 	burger_item[0].classList.toggle("animate0")
+// 	burger_item[1].classList.toggle("hide");
+// 	burger_item[2].classList.toggle("animate2");
+// 	menu.classList.toggle("active");
+// })
+// toggle menu
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarMenu = document.getElementById('menu');
+
+navbarToggler.addEventListener("click", navbarTogglerClick);
+
+function navbarTogglerClick() {
+  navbarToggler.classList.toggle("open-navbar-toggler");
+  navbarMenu.classList.toggle("open");
+}
 
 // რუკის შემოტანა
+
+// var map;
+// function initMap() {
+//     map = new google.maps.Map(document.getElementById('map'), {
+//       center: {lat: 41.729483, lng: 44.4884286},
+//       zoom: 8
+//   });
+// }
 function initMap() {
       //Map options
 
@@ -66,3 +84,83 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   } 
 });
+
+// Get the modal
+var contact = document.getElementById('contact_form');
+
+// Get the button that opens the modal
+var bookBtn = document.getElementById("book");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+bookBtn.onclick = function() {
+  contact.style.display = "block";
+  //  თუ არის კლასი close, შეიცვალოს ბტნ x, თუ არაა დაემატოს კლასი
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  contact.style.display = "none";
+  //x შეიცვალოს თავდაპირველი კონტენტით
+}
+
+// success send
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("sendBtn");
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// scroll to top
+const backToTopButton = document.querySelector("#back-to-top-btn");
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+  if(window.pageYOffset > 300) { //show backToTopButton
+    if(!backToTopButton.classList.contains("btnEntrance")){
+      backToTopButton.classList.remove("btnExit");
+      backToTopButton.classList.add("btnEntrance");
+      backToTopButton.style.display = "block";
+    }
+  }
+  else { //hide backToTopButton
+    if(backToTopButton.classList.contains("btnEntrance")){
+        backToTopButton.classList.remove("btnEntrance");
+       backToTopButton.classList.add("btnExit");
+   setTimeout(function() {
+        backToTopButton.style.display = "none";
+      }, 250);
+    }
+  }
+}
+
+backToTopButton.addEventListener("click", smoothScrollBackToTop);
+
+function smoothScrollBackToTop() {
+  const targetPosition = 0;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 500;
+  let start = null;
+  
+  window.requestAnimationFrame(step);
+
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d/2;
+  if (t < 1) return c/2*t*t*t + b;
+  t -= 2;
+  return c/2*(t*t*t + 2) + b;
+};
