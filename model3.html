@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<!-- header -->
+		<!-- header -->
 	<header>
 		<a href="index.html"><img src="assets/images/static/logo.svg" alt="Nod-Motors ლოგო" title="Nod-Motors - ლოგო"></a>
 		<nav id="menu">
@@ -20,7 +20,7 @@
 				<li><a href="#!">Cars</a></li>
 				<li><a href="terms&conditions.html">Terms and Conditions</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li class="book"><a href="#!">Book</a></li>
+				<li id="book" class="book"><a href="#!">Book</a></li>
 			</ul>
 		</nav>
 		<!-- burger menu -->
@@ -32,6 +32,30 @@
 		<!-- burger menu end -->
 	</header>
 	<!-- header end -->
+	<!-- book contact form -->
+	<div id="contact_form" class="contact_form ">
+		<span class="close">&times;</span>
+		<form action="#!" method="post" class="message_info">
+			<h1>Booking Form</h1>
+			<p>Includes Michelin Pilot Sport 4S tires, larger, more powerful brakes and lowered</p>
+			<input type="text" name="firstname" value="Qeti">
+			<input type="text" name="subject" placeholder="Subject">
+			<input type="text" name="email" placeholder="Email">
+			<textarea cols="22" rows="6" placeholder="Message"></textarea>
+			<a id="sendBtn" class="send">send</a>
+		</form>
+		<!-- success btn -->
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<img src="assets/images/static/check.png" alt="check icon" title="check icon">
+				<h2 class="thank">Thank you!</h2>
+				<p>Your message has been
+				sent successfully.</p>
+			</div>
+		</div>
+	<!-- success btn end -->
+	</div>
+	<!-- book contact form end -->
 	<!-- hero -->
 	<div class="hero">
 		<section class="hero_content">
