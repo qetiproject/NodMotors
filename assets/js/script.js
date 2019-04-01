@@ -1,18 +1,3 @@
-// burger მენიუ
-
-// var burger = document.getElementById('burger'),
-
-// menu = document.getElementById('menu'),
-
-// burger_item = document.querySelectorAll(".burger_item");
-
-// document.getElementById("burger").addEventListener("click", function(){
- 
-// 	burger_item[0].classList.toggle("animate0")
-// 	burger_item[1].classList.toggle("hide");
-// 	burger_item[2].classList.toggle("animate2");
-// 	menu.classList.toggle("active");
-// })
 // toggle menu
 const navbarToggler = document.querySelector(".navbar-toggler");
 const navbarMenu = document.getElementById('menu');
@@ -24,15 +9,7 @@ function navbarTogglerClick() {
   navbarMenu.classList.toggle("open");
 }
 
-// რუკის შემოტანა
 
-// var map;
-// function initMap() {
-//     map = new google.maps.Map(document.getElementById('map'), {
-//       center: {lat: 41.729483, lng: 44.4884286},
-//       zoom: 8
-//   });
-// }
 function initMap() {
       //Map options
 
