@@ -477,7 +477,7 @@ main.contact {
 	padding: 8px 0 8px 10px;
 	margin-top: 10px;
 }
-.message_info input:last-child {
+.message_info:last-child {
 	margin-top: 30px;
 }
 .send {
@@ -527,20 +527,16 @@ main.model3 {
 	flex-direction: column;
 	margin-bottom: 35px;
 }
-.model3_performance_content:nth-child(odd){
-	width: 440px;
+.model3_performance_content {
+    width: calc(50% - 10px);
 }
-.model3_performance_content:nth-child(even){
-	width: calc(100% - 450px);
+.model3_performance_content.img {
+	padding-right: 10px;
 }
-/*.model3_performance_content.img:last-child{
-	width: calc(100vw - 450px);
-    position: absolute;
-    right: 0;
-    top: 140px;
-    border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-}*/
+.model3_performance_content.img img{
+	/*width: 100%;*/
+	object-fit: cover;
+}
 /*model3_performance end*/
  /*safety*/
 .safety {
@@ -599,6 +595,9 @@ main.model3 {
 	padding-right: 0;
 }
 /*model page end*/
+/*contact page*/
+
+/*contact page end*/
 /*footer*/
 footer {
 	display: flex;
@@ -769,9 +768,14 @@ footer {
 	width: 100%;
 	}
 	.model3_img img {
-	width: 100%;
-	height: auto;
-	object-fit: cover;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		padding: 0;
+	}
+	.performance_content_img {
+		display: flex;
+		flex-direction: column;
 	}
 }
 /*model page end*/
@@ -960,6 +964,7 @@ footer {
 	}
     /*header end*/
 /*main page end*/
+
 }
 @media only screen and (min-width: 960px) {
 	/*header*/
