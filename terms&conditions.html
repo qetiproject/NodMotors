@@ -30,8 +30,9 @@
 		<!-- navbar-toggler end -->
 	</header>
 	<!-- header end -->
-	<!-- content for book button -->
+	<!-- book contact form -->
 	<div id="contact_form" class="contact_form ">
+		<span class="close">&times;</span>
 		<form action="#!" method="post" class="message_info">
 			<h1>Booking Form</h1>
 			<p>Includes Michelin Pilot Sport 4S tires, larger, more powerful brakes and lowered</p>
@@ -39,10 +40,20 @@
 			<input type="text" name="subject" placeholder="Subject">
 			<input type="text" name="email" placeholder="Email">
 			<textarea cols="22" rows="6" placeholder="Message"></textarea>
-			<input class="send" type="submit" name="submit" value="Send">
+			<a id="sendBtn" class="send">send</a>
 		</form>
+		<!-- success btn -->
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<img src="assets/images/static/check.png" alt="check icon" title="check icon">
+				<h2 class="thank">Thank you!</h2>
+				<p>Your message has been
+				sent successfully.</p>
+			</div>
+		</div>
+	<!-- success btn end -->
 	</div>
-	<!-- content for book button end -->
+	<!-- book contact form end -->
 	<!-- main -->
 	<main class="main_conditions">
 		<h1 class="main_conditions_title">Terms and Conditions</h1>
@@ -61,6 +72,10 @@
 		</ul>
 	</footer>
 
+	<button id="back-to-top-btn" class="back-to-top-btn">
+		<span class="icon-arrow-up"></span>
+	</button>
+	
 	<script src="assets/js/script.js"></script>
 </body>
 </html>
