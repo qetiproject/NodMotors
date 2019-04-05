@@ -97,13 +97,11 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 bookBtn.onclick = function() {
   contact.style.display = "block";
-  //  თუ არის კლასი close, შეიცვალოს ბტნ x, თუ არაა დაემატოს კლასი
 }
 
 // When the user clicks on <span> (x), close the modal
 // span.onclick = function() {
 //   contact.style.display = "none";
-//   //x შეიცვალოს თავდაპირველი კონტენტით
 // }
 
 // success send
